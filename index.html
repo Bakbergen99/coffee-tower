@@ -9,7 +9,7 @@
         body {
             margin: 0;
             font-family: 'Comic Sans MS', cursive;
-            background: url("https://i.gifer.com/2FxK.gif") no-repeat center center fixed;
+            background: url('https://i.imgur.com/YphsTBl.png') no-repeat center center fixed;
             background-size: cover;
             overflow: hidden;
             display: flex;
@@ -20,7 +20,7 @@
         }
 
         h1 {
-            color: #ffff00;
+            color: #4B2E2E;
             text-shadow: 2px 2px 4px #fff;
             margin: 20px;
             text-align: center;
@@ -166,7 +166,7 @@
     <div id="statusText">Ойынды бастау үшін төмендегі батырманы басыңыз 👇</div>
     <div id="game"></div>
     <div id="buttons">
-        <button id="startBtn" onclick="startGame()"> Ойнау</button>
+        <button id="startBtn" onclick="startGame()">  Ойнау</button>
         <button id="backBtn" onclick="goBack()">🔙 Артқа</button>
     </div>
     <div id="result"></div>
@@ -178,7 +178,7 @@
     <script>
         const game = document.getElementById('game');
         const blockHeight = 60; // Height of each coffee cup block
-        const maxVisibleBlocks = 5; // Экранда көрінетін максималды стакан саны
+        const maxVisibleBlocks = 6; // Экранда көрінетін максималды стакан саны
         let currentBlock = null;
         let currentLeft = 50; // Initial percentage for horizontal position
         let direction = 1; // 1 for right, -1 for left
@@ -199,7 +199,7 @@
         function updateButtons(state) {
             if (state === 'playing') {
                 buttonsContainer.innerHTML = `
-                    <button onclick="dropBlock()">📥</button>
+                    <button onclick="dropBlock()">📥 Стаканды қою</button>
                     <button onclick="stopGame()">⛔ Тоқтату</button>
                 `;
             } else if (state === 'start') {
@@ -281,7 +281,7 @@
         function moveBlock() {
             clearInterval(moveIntervalId);
 
-            const moveSpeed = 8 + (level * 0.5); // Increase speed with level
+            const moveSpeed = 3 + (level * 0.5); // Increase speed with level
             moveIntervalId = setInterval(() => {
                 if (!currentBlock || gameOver) {
                     clearInterval(moveIntervalId);
@@ -395,3 +395,4 @@
 </body>
 
 </html>
+ 
